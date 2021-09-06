@@ -22,4 +22,4 @@ Functions
 
 
 # 2 SQL commands
-The other option is a few codes of SQL and a software
+The other option is a few codes of SQL and a software. New values are added by modifying a table in DB Brower and including the text 'add' in the corresponding cells in an adjacent column to indicate which new records to add.
