@@ -1,10 +1,9 @@
 # Inventory-app
 
-This is a simple database app. I created one before knowing much about SQL so it's implemented in Python and updates the v
+This is a simple database app. I created one before knowing much about SQL so it's implemented in Python only, creating. The other option was just a few short SQL scripts and viewing in a software (I used [DB Browser for SQLITE](https://sqlitebrowser.org/dl/)).
 
-# 1 - no SQL used
-The main functionality is to update the main inventory spreadsheet using another spreadsheet 'Estimates' which indicates the products used at each sale. The CSV files of the inventory and . With a couple commands it will prompt the user to load the latest inventory and estimate spreadsheets to be updated.  An 'add record' command which prompts for user input of the estimate ID, product numbers, and quantities. Another command lets me check the records that will be modified in the main inventory sheet, and their values before and after updating. If the product number is mistyped there is an output warning. It also adds a couple columns with the date and time that the inventory is being updated.
-A couple commands will let the user quickly save the updated inventory spreadsheet, estimates record, and plots in a folder with date (date of entry) automatically included.
+# 1 - Python code with  no SQL
+The main functionality is to update the main inventory spreadsheet using another spreadsheet, 'estimates', which indicates the products used at each sale. With a couple commands it will prompt the user to load the latest inventory and estimate spreadsheets to be updated.  An 'add record' command prompts for user input of the estimate ID, product numbers, and quantities. Other commands let me check the records that will be updated in the main inventory sheet, and their values before and after updating. If the new record product number is mistyped relative to the inventory spreadsheet, there is an output warning. The code also adds a couple columns with the date and time that the inventory is being updated. A couple commands will let the user quickly save the updated inventory spreadsheet, estimates record, and plots in a folder with date (date of entry) automatically included.
 
 Functions
 |  Function name | Description   |   |   |   |
