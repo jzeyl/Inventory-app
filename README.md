@@ -2,7 +2,7 @@
 
 This is a simple database app. I created one before knowing much about SQL so it's implemented in Python and updates the v
 
-# 1 no SQL used
+# 1 - no SQL used
 The main functionality is to update the main inventory spreadsheet using another spreadsheet 'Estimates' which indicates the products used at each sale. The CSV files of the inventory and 
 What the program does:
 ## Import:
@@ -12,5 +12,21 @@ I have an 'add record' command which prompts for user input of the estimate ID, 
 ## Export:
 A couple commands will let the user quickly save the updated inventory spreadsheet, estimates record, and plots in a folder with date (date of entry) automatically included.
 
-# SQL commands
-The other option is a few codes of SQL implemented in 
+Functions
+|   |   |  Function name | Description   |   |   |   |
+|   |   |---|---|---|---|---|
+|   |   |  import_inventory() |   |   |   |   |
+|   |   |  import_estimates() |   |   |   |   |
+|   |   |  add_record |   |   |   |   |
+|   |   |  clear_record() |   |   |   |   |
+|   |   |  view_record() |   |   |   |   |
+|   |   |  update_inventory() | Creates a new 'inventory' dataframe with updated values  |   |   |   |
+|   |   |  view_modified_products() |   |   |   |   |
+|   |   |  view_products_to_update() |   |   |   |   |
+|   |   |  save_inventory() |   |   |   |   |
+|   |   |  save_estimates() |   |   |   |   |
+|   |   |  saveplot() |   |   |   |   |
+|   |   
+
+# 2 SQL commands
+The other option is a few codes of SQL and a software
