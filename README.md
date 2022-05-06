@@ -1,3 +1,5 @@
+N.B. this app is a work in progress------------
+
 # Inventory-app
 
 This repository is an excercise in CRUD operations applied both with and without using a relational database. 
