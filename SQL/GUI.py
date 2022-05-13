@@ -1,7 +1,22 @@
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 from datetime import datetime
 
+import sqlite3
+import os
+import csv
+import pandas as pd
+
+#connect to database
+conn = sqlite3.connect('productinventory.db')#make dB connection
+cursor = conn.cursor()
+
+os.chdir(r'C:\Users\jeffz\Desktop\inventoryapp\SQL')
+os.getcwd()
+
+
+#get date and time for stamp on each record
 dt = datetime.now()
 date = dt.strftime("%d/%m/%Y")
 time = dt.strftime("%H:%M:%S")
@@ -11,17 +26,24 @@ time = dt.strftime("%H:%M:%S")
 def show_entry_fields():
     global record
     record = (a1.get(), b1.get(), c1.get(),date,time)
-    print("Estimate number: %s\nProduct number: %s\nQuantity: %s\nDate: %s\nTime: %s" % (a1.get(), b1.get(), c1.get(),date,time))
+    print("Estimate number: %s\n Product number: %s\n Quantity: %s\n Date: %s\n Time: %s" % 
+    (a1.get(), b1.get(), c1.get(),date,time))
 
 #add estimate to database
 def addtodatabase():
+    global record
+    record = (a1.get(), b1.get(), c1.get(),date,time)
     # Insert a row of data
-    cursor.execute("INSERT INTO estimates VALUES (?, ?, ?, ?,?)", (record))
+    cursor.execute("INSERT INTO Estimates VALUES (?, ?, ?, ?,?)", (record))
+    # Save (commit) the changes
+    conn.commit()
+    print(type(record))
+    messagebox.showinfo('information', Record has been added to the database.')
 
-
+#create gui
 window = tk.Tk()
 window.title("Welcome to TutorialsPoint")
-window.geometry('400x100')
+window.geometry('400x200')
 window.configure(background = "grey");
 
 #labels
@@ -38,7 +60,7 @@ c1 = tk.Entry(window)
 c1.grid(row = 2,column = 1)
 
 btn = ttk.Button(window ,text="Show record", command = show_entry_fields).grid(row=6,column=0)
-btn = ttk.Button(window ,text="Add entry to database", command = show_entry_fields).grid(row=6,column=1)
-
+btn = ttk.Button(window ,text="Add entry to database", command = addtodatabase).grid(row=6,column=1)
 btn = ttk.Button(window ,text="Plot current inventory", command = show_entry_fields).grid(row=6,column=2)
+btn = ttk.Button(window ,text="View estimates table", command = addtodatabase).grid(row=7,column=1)
 window.mainloop()

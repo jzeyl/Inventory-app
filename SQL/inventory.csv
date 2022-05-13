@@ -1,4 +1,4 @@
-﻿Product category,Product num,Description,Wholesale Price per Unit,Pre-season order price,Units per Case,num of Cases to Order,Total_Units,Subtotal,Date of last entry,Time of last entry
+﻿Product_category,Product_num,Description,Wholesale Price per Unit,Pre-season order price,Units per Case,num of Cases to Order,Total_Units,Subtotal,Date of last entry,Time of last entry
 Socket Wire,C9-1000-12-G,"New: (pre-season only): C9 spool (E17/Intermediate base) 1000 ft, 18AWG SPT-2, 12"" spacing, GREEN",415,290.5,1,,0,0,,
 Socket Wire,C9-1000-12-BK,"New: (pre-season only): C9 spool (E17/Intermediate base) 1000 ft, 18AWG SPT-2, 12"" spacing, BLACK",415,290.5,1,10,10,2905,,
 Socket Wire,C9-1000-12-W,"New: (pre-season only): C9 spool (E17/Intermediate base) 1000 ft, 18AWG SPT-2, 12"" spacing, WHITE",415,290.5,1,10,10,2905,,
